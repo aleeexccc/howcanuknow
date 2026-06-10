@@ -35,20 +35,22 @@ h1 {
 <h1> NGEH NGEHHHHH </h1>
 
   <div class="video-container">
-  
-  
-        <video controls>
-            <source src="scuba.mp4" type="video/mp4">
 
-          <video id="myVideo" autoplay muted playsinline loop>
-    <source src="myvideo.mp4" type="video/mp4">
-</video>
+  <video id="myVideo" autoplay muted playsinline loop>
+    <source src="scuba.mp4" type="video/mp4">
+  </video>
+
+</div>
 
 <button onclick="unmuteVideo()">Enable Sound</button>
-         
-        </video>
-    </div>
 
+<script>
+function unmuteVideo() {
+  const video = document.getElementById("myVideo");
+  video.muted = false;
+  video.play();
+}
+</script>
 
 </body>
 </html>
